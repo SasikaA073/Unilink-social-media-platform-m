@@ -9,7 +9,7 @@ class ArticleListView(ListView):
     model = Article
     template_name = 'article_list.html'
 
-class ArticleDetailView(ListView):
+class ArticleDetailView(DetailView):
     model = Article
     template_name = 'article_detail.html'
     fields = ('title', 'body', 'image')
@@ -18,7 +18,11 @@ class ArticleDetailView(ListView):
 class ArticleCreateView(CreateView):
     model = Article
     template_name = 'article_new.html'
-    fields = '__all__'
+    fields = ('title','body','image',)
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class ArticleUpdateView(UpdateView):
