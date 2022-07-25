@@ -14,4 +14,13 @@
 </div>
 <p>Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
 
+<div class="container">
+    {% for comment in object.comments.all %}
+    <p>
+    <span class="font-weight-bold">{{ comment.author }} &middot;</span>
+    {{ comment }}
+    </p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
