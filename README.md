@@ -28,10 +28,9 @@ This is how to get started and customize it.
     In Windows,
 
         python -m venv "MyVirtEnv"
-        cd MyVirtEnv\Scripts
-        activate
+        source MyVirtEnv\Scripts\activate
             
-    Don't forget to return to the path where manage.py is in. If your Python virtual environment works fine, then in the command line should be something similar to this.
+    If your Python virtual environment works fine, then in the command line should be something similar to this.
 
         (MyVirtEnv) C:\Users\Foo
 
