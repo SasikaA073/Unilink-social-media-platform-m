@@ -1,5 +1,7 @@
 # UniLink Project
 
+![Sample UI of first version of app](image-14.png)
+
 This is a social media project that is developed using Django Framework as backend. Our main goal of this project was to build a platform to connect with other university students. This has similar funcionalities like other Social Media Platforms like Facebook.
 
 Funcionalities available so far in the site :
@@ -31,6 +33,8 @@ This is how to get started and customize it.
         source MyVirtEnv\Scripts\activate
             
     If your Python virtual environment works fine, then in the command line should be something similar to this.
+    
+
 
         (MyVirtEnv) C:\Users\Foo
 
