@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=(m0z-ejazxbqc9ysov5q1*v$!^lq^j#d%$=3@8^rw*!(^0zlm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*',"157.245.152.26"]
 
@@ -145,5 +145,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_URL = '/images/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+# MEDIA_URL = '/images/'
+
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [BASE_DIR / "static"]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'pages/static'),
+                    os.path.join(BASE_DIR,'articles/static'),
+                    os.path.join(BASE_DIR,'static')
+                    ]
