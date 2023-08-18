@@ -1,23 +1,22 @@
 {% extends "base.html" %}
-
 {% load static %}
-
-{% block title %} Home {% endblock title %}
-
-
+{% block title %}
+Home
+{% endblock title %}
 {% block content %}
 
 {% if user.is_authenticated %}
 
-<h4> Welcome back <i>{{ user.username }}</i>! </h4>
+<h4>Welcome back <i>{{ user.username }}</i>!</h4>
 
-<img src="{% static 'images/lady_sybil.png' %}" alt="Lady Sybil">
-
-
+<p>THe below is a test image</p>
+<img src="{% static 'images/lady_sybil.png' %}" alt="Lady Sybil" style="max-width: 50%; height: auto" />
 
 <div class="jumbotron">
     <h1 class="display-4">UniLink</h1>
-    <p class="lead">The ultimate social media platform to connect undergrads :)</p>
+    <p class="lead">
+        The ultimate social media platform to connect undergrads :)
+    </p>
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Go to Feed</a>
         <a class="btn btn-outline-secondary btn-lg" href="{% url 'logout' %}" role="button">Log Out</a>
@@ -28,10 +27,8 @@
 
 {% else %}
 
-<h4> You are not logged in </h4>
+<h4>You are not logged in</h4>
 <a href="{% url 'login' %}">Log In</a>|
 <a href="{% url 'signup' %}">Log Out</a>
 
-{% endif %}
-{% endblock content %}
-
+{% endif %} {% endblock content %}

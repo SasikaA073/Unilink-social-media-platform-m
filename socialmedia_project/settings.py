@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+CRISPY_TEMPLATE_PACK = 'uni_form'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -145,14 +147,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-# MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/media')
+MEDIA_URL = '/media/'
 
 
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "static"]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'pages/static'),
-                    os.path.join(BASE_DIR,'articles/static'),
-                    os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [
+                    os.path.join(BASE_DIR,'static'),
                     ]

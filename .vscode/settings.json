@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "MyVirtEnv": true,
+        "venv": true,
+        ".vscode": true,
+        "articles/__pycache__": true
+    }
+}
